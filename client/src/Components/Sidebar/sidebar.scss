@@ -1,0 +1,113 @@
+$screen-md-max: 992px;
+
+@mixin md {
+    @media (max-width: #{$screen-md-max}) {
+        @content;
+    }
+}
+
+
+.sidebar {
+    background-color:rgb(50, 30, 86);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    position: fixed;
+    width: 20%;
+    color: white;
+
+    .upper__container {
+        .links {
+            li {
+                padding-right: 0;
+                list-style-type: none;
+                margin: 1.5rem 0;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                svg {
+                    color: white;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    margin-bottom: 7rem;
+                }
+            }
+        }
+    }
+
+    @include md {
+        display: none;
+    }
+}
+
+.openSidebar {
+    background-color: rgb(50, 30, 86);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    position: fixed;
+    width: 20%;
+    color: white;
+
+    .upper__container {
+        .links {
+            li {
+                padding-right: 0;
+                list-style-type: none;
+                margin: 1.5rem 0;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                svg {
+                    color: white;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    margin-bottom: 7rem;
+                }
+            }
+        }
+    }
+
+    @include md {
+        z-index: 1;
+        width: 20rem;
+    }
+}
+
+
+.hidden{
+    display: none;
+}
+
+.navButton{
+    display: none;
+
+    @include md {
+        background-color: rgb(50, 30, 86);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+        position: fixed;
+        width: 10%;
+        color: white;
+        z-index: 3;
+    }
+}
+
+.icon{
+    color: white;
+    margin-top: 2rem;
+}

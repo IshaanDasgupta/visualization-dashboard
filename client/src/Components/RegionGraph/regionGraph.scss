@@ -1,0 +1,27 @@
+.country{
+    fill: rgb(96, 53, 164);
+    stroke: white;
+    stroke-width: 1;
+    opacity: 0.1;
+}
+
+.regionCard {
+    width: 100%;
+    padding-top: 1rem;
+    margin: 1rem 0;
+    background-color: white;
+    border-radius: 0.4rem;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+        transform: translateX(4px);
+        transform: translateY(-4px);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px 25px,
+            rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    }
+}
+
+.regionCard h1,
+p {
+    margin: 1rem;
+}

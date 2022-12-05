@@ -1,0 +1,33 @@
+$screen-md-max: 992px;
+
+@mixin md {
+    @media (max-width: #{$screen-md-max}) {
+        @content;
+    }
+}
+
+.metrics {
+    background-color:rgba(39, 27, 106, 0.208);
+    padding: 0 2rem;
+    margin-left: 20%;
+    width: 80%;
+    span {
+        font-weight: 700;
+        color: rgb(109, 109, 109);
+    }
+
+    @include md{
+        margin-left: 10%;
+        padding: 2rem;
+        width: 90%;
+    }
+
+}
+
+.myflex{
+    display: flex;
+    justify-content: space-between;
+    @include md {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,32 @@
+$screen-md-max: 992px;
+
+@mixin md {
+    @media (max-width: #{$screen-md-max}) {
+        @content;
+    }
+}
+
+.relevanceCard {
+    width: 48%;
+    padding-top: 1rem;
+    margin: 1rem 0;
+    background-color: white;
+    border-radius: 0.4rem;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+        transform: translateX(4px);
+        transform: translateY(-4px);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px 25px,
+            rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    }
+
+    @include md{
+        width: 100%;
+    }
+}
+
+.relevanceCard h1,
+p {
+    margin: 1rem;
+}
